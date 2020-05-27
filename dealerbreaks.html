@@ -1,118 +1,65 @@
-<!DOCTYPE html>
-
 <html>
+        <head>
+            <title> 
+                Calculate dealer breaks
+            </title> 
+        </head> 
+          
+        <body> 
+            <h1 style="color: green"> 
+                 Dealer Breaks 
+            </h1> 
 
-<head>
-    <img src="peppermill.jpg" alt="UFC 249">
-<title>Pepeppermill deler breaks</title
+            <form>
+                Select your shift:
+                <select id="mySelect">
+                  <option value="day">day shift</option>
+                  <option value="swing">swing shift</option>
+                  <option value="graveyard">graveyard shift</option>
+                </select>
+              </form>
+              
+              <p>Click the button to change the selected fruit.</p>
+              
+              <button type="button" onclick="myFunction()">Try it</button>
+              
+              <script>
+              function myFunction() {
+              var x;
+                x=document.getElementById("mySelect").value;
+                document.write(x);
+              }
+              </script>
+                  </br></br>
+                  <!--Display value number of dealers-->
+                      <input type="text" placeholder="Enter number of dealers" id="myInput1">
+                      <button type="button" onclick="getInputValue1();">Get Value</button>
+                      
+                      <script>
+                          function getInputValue1(){
+                              // Selecting the input element and get its value 
+                              var inputVal1 = document.getElementById("myInput1").value;
+                              
+                              // Displaying the value
+                              alert(inputVal1);
+                          }
+                      </script>
+                    </br></br>
+                      <!--Display value number of tables-->
+                       <input type="text" placeholder="Enter number of tables" id="myInput">
+                      <button type="button" onclick="getInputValue();">Get Value</button>
+                      
+                      <script>
+                          function getInputValue(){
+                              // Selecting the input element and get its value 
+                              var inputVal = document.getElementById("myInput").value=(+1);
+                              
+                              // Displaying the value
+                              alert(inputVal+1);
+                          }
+                      </script>
+        
+           
 
-></head>
-
-<
-<body style="background-color:white;">
-      <h1>Welcome to the Peppermill dealer breaks system!</h1>
-
-<p>My app</p>
-<!--//select tag
-</select>
-
-<p>Please enter number of dealers</p>
-<select id="shift">
-  <option value="volvo">1</option>
-  <option value="saab">2</option>
-  <option value="mercedes">3</option>
-  
-</select>//--> 
-
-<label for="shifts">Select shift:</label>
-
-<select id="shift">
-  <option value="volvo">Day shift</option>
-  <option value="saab">Swing shift</option>
-  <option value="mercedes">Graveyard shift</option>
-  
-</select>
-
-<p>Please enter number of dealers</p>
-<select id="shift">
-  <option value="volvo">1</option>
-  <option value="saab">2</option>
-  <option value="mercedes">3</option>
-</select>
-
-<p>Please enter number of open tables:</p>
-<select id="shift">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  
-</select>
-  
-</select>
-<p>Please enter number of tables:</p>
-<div class="dropdown">
-    <button class="dropbtn">Dropdown</button>   
-    <div class="dropdown-content">
-      <a href="#">Fighter 1</a>
-      <a href="#">Fighter 2</a>
-      <a href="#">Fighter 3</a>
-    </div>
-  </div>
-
-
-
-
-<script>
-var a = 1;
-var b=2;
-fight(a,b);
-
-</script>
-
-
-<p>Clck the button to display "Good day", only if the time is less than 12:00am.</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-  var time = new Date().getHours();
-  if (time < 24) {
-    document.getElementById("demo").innerHTML = "Good day";
-  }
-}
-
-
-</script>
-<script>
-
-document.getElementById("demo").innerHTML = "Thank you have a nice day!";
-
-  
-  </script>
-
-<h1>Dialogue boxes</h1>
-<div class="sample"></div>
-<button class="alert">ALERT BOX</button>
-<button class="confirm">CONFIRM BOX</button>
-<button class="prompt">PROMPT BOX</button>
-<h3>
-Click on the above button to see their dialogue box
-</h3>
-<script>
-let fillEle = document.querySelector(".sample");
-document.querySelector('.alert').addEventListener('click',()=>{
-   alert('Hello World');
-});
-document.querySelector('.confirm').addEventListener('click',()=>{
-  confirm('Are you sure?');
-});
-document.querySelector('.prompt').addEventListener('click',()=>{
-   prompt('Enter your name');
-})
-</script>
-</body>
-
-</html>
+        </body>
+</html> 
