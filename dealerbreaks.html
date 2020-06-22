@@ -1,65 +1,58 @@
+<!DOCTYPE html>
 <html>
-        <head>
-            <title> 
-                Calculate dealer breaks
-            </title> 
-        </head> 
-          
-        <body> 
-            <h1 style="color: green"> 
-                 Dealer Breaks 
-            </h1> 
+<head>
+  <script type="text/javascript">
+function dealer(n1,n2)
+{
+var no1=parseFloat(n1)
+var no2=parseFloat(n2)
+var no3=no1-no2
+var no4=no2/no3
+var no5=no4*20/60
+myform.btn3.value=no3
+myform.btn5.value=no4 
+myform.btn6.value=no4*20
+myform.btn7.value=no5/60 
+}
+</script>
+</head>
+<body>
 
-            <form>
-                Select your shift:
-                <select id="mySelect">
-                  <option value="day">day shift</option>
-                  <option value="swing">swing shift</option>
-                  <option value="graveyard">graveyard shift</option>
-                </select>
-              </form>
-              
-              <p>Click the button to change the selected fruit.</p>
-              
-              <button type="button" onclick="myFunction()">Try it</button>
-              
-              <script>
-              function myFunction() {
-              var x;
-                x=document.getElementById("mySelect").value;
-                document.write(x);
-              }
-              </script>
-                  </br></br>
-                  <!--Display value number of dealers-->
-                      <input type="text" placeholder="Enter number of dealers" id="myInput1">
-                      <button type="button" onclick="getInputValue1();">Get Value</button>
-                      
-                      <script>
-                          function getInputValue1(){
-                              // Selecting the input element and get its value 
-                              var inputVal1 = document.getElementById("myInput1").value;
-                              
-                              // Displaying the value
-                              alert(inputVal1);
-                          }
-                      </script>
-                    </br></br>
-                      <!--Display value number of tables-->
-                       <input type="text" placeholder="Enter number of tables" id="myInput">
-                      <button type="button" onclick="getInputValue();">Get Value</button>
-                      
-                      <script>
-                          function getInputValue(){
-                              // Selecting the input element and get its value 
-                              var inputVal = document.getElementById("myInput").value=(+1);
-                              
-                              // Displaying the value
-                              alert(inputVal+1);
-                          }
-                      </script>
-        
-           
-
+  <h1>Calculate dealer breaks</h1>
+ 
+  <p id="demo3"></p>
+  <h4>Select your shift  </h4>
+  <select id="mySelect" size="3">
+    <option>Day</option>
+    <option>Swing</option>
+    <option>Grave</option>
+  
+  </select>
+ 
+  <button onclick="myFunction3()">Submit</button>
+  <script>
+    function myFunction3()
+    {
+      var x= document.getElementById("mySelect").value;
+      document.getElementById("demo3").innerHTML=x;
+      
+    }
+  </script>
+  <form name=myform>
+  Number of dealers:
+  <input type=text name=btn1>
+  <br><br>
+  Number of tables:
+  <input type=text name=btn2>
+  <input type=button name=btn4 value=COMPUTE onclick="dealer(btn1.value,btn2.value)">
+  <br><br>
+  Number of breakers:
+  <input type=text name=btn3>
+  <br><br>Frequency of breaks:
+  <input type=text name=btn5 >/per<br><br>
+  Break Frequency
+  <input type=text name=btn6>
+  <input type=text name=btn7 >hour
+  </form>
         </body>
 </html> 
